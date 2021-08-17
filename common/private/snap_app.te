@@ -37,3 +37,6 @@ allow snap_app system_app_data_file:file { read write getattr };
 
 # Binder call with gpuservice
 binder_call(snap_app, gpuservice)
+
+# Fix f. hardened microG build
+get_prop(snap_app, exported_camera_prop)
